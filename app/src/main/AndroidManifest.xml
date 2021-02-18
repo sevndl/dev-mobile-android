@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fr.epsi.shop">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Shop">
-        <activity android:name=".CategoriesActivity"></activity>
+        <activity android:name=".CategoriesActivity" />
         <activity android:name=".GroupeActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".SplashActivity">
