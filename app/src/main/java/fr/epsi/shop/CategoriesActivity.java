@@ -15,5 +15,8 @@ public class CategoriesActivity extends EpsiActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
+        String title = getIntent().getExtras().getString("title","");
+        showBack();
+        setTitle(title);
     }
 }
