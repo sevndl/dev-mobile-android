@@ -27,7 +27,7 @@ public class HomeActivity extends EpsiActivity implements View.OnClickListener {
                 GroupeActivity.displayActivity(this, "Groupe");
                 break;
             case R.id.buttonCategorie:
-                CategoriesActivity.displayActivity(this, "Catégories");
+                CategoriesActivity.displayActivity(this, "Rayons");
                 break;
         }
     }
