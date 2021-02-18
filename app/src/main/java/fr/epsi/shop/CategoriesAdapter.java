@@ -3,13 +3,10 @@ package fr.epsi.shop;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -52,7 +49,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
         holder.getLayoutCellCategorie().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CategoriesActivity.displayActivity(activity, categorie.getTitle());
+                ProduitsActivity.displayActivity(activity, categorie.getTitle());
             }
         });
     }
