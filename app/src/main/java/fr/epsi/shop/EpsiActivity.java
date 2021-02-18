@@ -14,19 +14,19 @@ public class EpsiActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("tag","############## onCreate ################# :"+getClass().getSimpleName());
+        Log.d("tag","############## onCreate ################# :" + getClass().getSimpleName());
     }
 
 
     @Override
     public void finish() {
         super.finish();
-        Log.d("tag","############## finish ################# :"+getClass().getSimpleName());
+        Log.d("tag","############## finish ################# :" + getClass().getSimpleName());
     }
 
     public void showBack(){
-        ImageView imageView=findViewById(R.id.imageViewBack);
-        if(imageView!=null){
+        ImageView imageView = findViewById(R.id.imageViewBack);
+        if (imageView != null) {
             imageView.setVisibility(View.VISIBLE);
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -37,9 +37,9 @@ public class EpsiActivity extends AppCompatActivity {
         }
     }
 
-    public void setTitle(String title){
-        TextView textView=findViewById(R.id.textViewTitle);
-        if(textView!=null){
+    public void setTitle(String title) {
+        TextView textView = findViewById(R.id.textViewTitle);
+        if (textView != null) {
             textView.setText(title);
         }
     }

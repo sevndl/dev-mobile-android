@@ -15,5 +15,8 @@ public class GroupeActivity extends EpsiActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_groupe);
+        String title = getIntent().getExtras().getString("title","");
+        showBack();
+        setTitle(title);
     }
 }
