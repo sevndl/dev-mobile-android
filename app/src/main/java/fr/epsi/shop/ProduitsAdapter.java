@@ -11,9 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ProduitsAdapter extends RecyclerView.Adapter<ProduitsAdapter.ViewHolder> {
+public class ProduitsAdapter extends RecyclerView.Adapter<ProduitsAdapter.ViewHolder> implements Serializable {
     EpsiActivity activity;
     ArrayList<Produits> produits;
 
@@ -58,12 +59,12 @@ public class ProduitsAdapter extends RecyclerView.Adapter<ProduitsAdapter.ViewHo
         holder.getTextViewName().setText(produit.getName());
         holder.getTextViewDescription().setText(produit.getDescription());
         Picasso.get().load(produit.getPicture_url()).into(holder.getImageViewProduit());
-        /*holder.getLayoutCellProduit().setOnClickListener(new View.OnClickListener() {
+        holder.getLayoutCellProduit().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ProduitsActivity.displayActivity(activity, produit.getName());
+                DetailProduitActivity.displayActivity(activity, produit);
             }
-        });*/
+        });
     }
 
     @Override
