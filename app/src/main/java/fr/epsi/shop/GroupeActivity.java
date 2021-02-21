@@ -1,10 +1,17 @@
 package fr.epsi.shop;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 
 public class GroupeActivity extends EpsiActivity implements View.OnClickListener {
+
+
+    private Etudiants Severin = new Etudiants("NANDILLON", "Severin", "severin.nandillon@epsi.fr", "B2", "photo");
+    private Etudiants Oscar  = new Etudiants("MADEZO", "Oscar", "oscar.madezo@epsi.fr", "B2", "photo2");
+
 
     public static void displayActivity(EpsiActivity activity, String title) {
         Intent intent = new Intent(activity, GroupeActivity.class);
@@ -28,14 +35,19 @@ public class GroupeActivity extends EpsiActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         String photo;
+
+        Context activity = getApplicationContext();
+        Intent intent = new Intent(activity, ProfileActivity.class);
+
         switch (v.getId()){
             case R.id.severinBouton:
-                photo = "photo";
-                ProfileActivity.displayActivity(this, "NANDILLON", photo);
+                intent.putExtra("Etudient", this.Severin);
+                startActivity(intent);
                 break;
+
             case R.id.oscarBouton:
-                photo = "photo2";
-                ProfileActivity.displayActivity(this, "MADEZO", photo);
+                intent.putExtra("Etudient", this.Oscar);
+                startActivity(intent);
                 break;
         }
     }
