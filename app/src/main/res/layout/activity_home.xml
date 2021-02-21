@@ -17,6 +17,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:backgroundTint="#E7E435"
+        android:textColor="@android:color/black"
         android:text="Étudiants"/>
     <Button
         android:id="@+id/buttonCategorie"
@@ -24,5 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Catégories produits"/>
+        android:backgroundTint="#3FAFE6"
+        android:textColor="@android:color/black"
+        android:text="Rayons"/>
 </LinearLayout>
