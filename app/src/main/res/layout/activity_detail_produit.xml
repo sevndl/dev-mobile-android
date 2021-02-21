@@ -13,4 +13,20 @@
         android:layout_height="wrap_content"
         layout="@layout/layout_header"/>
 
+    <ImageView
+        android:id="@+id/imageViewProduitDetail"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:id="@+id/textViewDescriptionDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black"/>
+
 </LinearLayout>
