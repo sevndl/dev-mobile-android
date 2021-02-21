@@ -18,9 +18,10 @@ public class ProduitsActivity extends EpsiActivity {
 
     private ArrayList<Produits> produits;
 
-    public static void displayActivity(EpsiActivity activity, String name) {
+    public static void displayActivity(EpsiActivity activity, String name, String url) {
         Intent intent = new Intent(activity, ProduitsActivity.class);
         intent.putExtra("name", name);
+        intent.putExtra("url", url);
         activity.startActivity(intent);
     }
 
@@ -38,13 +39,12 @@ public class ProduitsActivity extends EpsiActivity {
         ProduitsAdapter produitsAdapter = new ProduitsAdapter(this, produits);
         recyclerView.setAdapter(produitsAdapter);
 
-        String rightName = name.toLowerCase();
-        String url = "https://djemam.com/epsi/" + rightName + ".json";
+        String url = getIntent().getExtras().getString("url", "");
         WSCall wsCall = new WSCall(url, new WSCall.Callback() {
             @Override
             public void onComplete(String result) {
                 try {
-                    JSONObject jsonObject = new JSONObject();
+                    JSONObject jsonObject = new JSONObject(result);
                     JSONArray jsonArray = jsonObject.getJSONArray("items");
                     for (int i = 0; i < jsonArray.length(); i++) {
                         Produits produit = new Produits(jsonArray.getJSONObject(i));

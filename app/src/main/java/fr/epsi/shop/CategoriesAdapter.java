@@ -45,11 +45,12 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Categories categorie = categories.get(position);
+        final String url = categorie.getProduitsUrl();
         holder.getTextViewTitle().setText(categorie.getTitle());
         holder.getLayoutCellCategorie().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ProduitsActivity.displayActivity(activity, categorie.getTitle());
+                ProduitsActivity.displayActivity(activity, categorie.getTitle(), url);
             }
         });
     }

@@ -58,12 +58,12 @@ public class ProduitsAdapter extends RecyclerView.Adapter<ProduitsAdapter.ViewHo
         holder.getTextViewName().setText(produit.getName());
         holder.getTextViewDescription().setText(produit.getDescription());
         Picasso.get().load(produit.getPicture_url()).into(holder.getImageViewProduit());
-        holder.getLayoutCellProduit().setOnClickListener(new View.OnClickListener() {
+        /*holder.getLayoutCellProduit().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ProduitsActivity.displayActivity(activity, produit.getName());
             }
-        });
+        });*/
     }
 
     @Override
