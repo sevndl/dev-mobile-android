@@ -23,20 +23,20 @@ public class GroupeActivity extends EpsiActivity implements View.OnClickListener
 
         findViewById(R.id.severinBouton).setOnClickListener(this);
         findViewById(R.id.oscarBouton).setOnClickListener(this);
-
     }
 
     @Override
     public void onClick(View v) {
+        String photo;
         switch (v.getId()){
             case R.id.severinBouton:
-                ProfileActivity.displayActivity(this, "NANDILLON", "drawable://photo.jpg");
+                photo = "photo";
+                ProfileActivity.displayActivity(this, "NANDILLON", photo);
                 break;
             case R.id.oscarBouton:
-                ProfileActivity.displayActivity(this, "MADEZO", "drawable://photo2.jpg");
+                photo = "photo2";
+                ProfileActivity.displayActivity(this, "MADEZO", photo);
                 break;
         }
     }
-
-
 }
