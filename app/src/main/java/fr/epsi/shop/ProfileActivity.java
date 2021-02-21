@@ -1,9 +1,6 @@
 package fr.epsi.shop;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.text.Html;
 import android.text.util.Linkify;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,7 +12,7 @@ public class ProfileActivity extends EpsiActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        Etudiants etudiants = (Etudiants) getIntent().getSerializableExtra("Etudient");
+        Etudiants etudiants = (Etudiants) getIntent().getSerializableExtra("Etudiant");
         showBack();
         setTitle(etudiants.getNom() + " " + etudiants.getPrenom());
 
