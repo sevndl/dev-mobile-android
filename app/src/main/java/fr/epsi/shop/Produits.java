@@ -2,7 +2,9 @@ package fr.epsi.shop;
 
 import org.json.JSONObject;
 
-public class Produits {
+import java.io.Serializable;
+
+public class Produits implements Serializable {
 
     private String name;
     private String description;
